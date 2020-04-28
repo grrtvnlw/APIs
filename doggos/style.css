@@ -1,0 +1,20 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  justify-content: center; 
+  background-color: lightgray;
+  min-height: 95vh;
+  width: 95vw; 
+}
+
+#images,
+.selectButton,
+.randomButton,
+h1 {
+  display: flex;
+  justify-content: center;
+}
