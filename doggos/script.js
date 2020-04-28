@@ -2,17 +2,18 @@ const button = document.querySelector('button')
 button.addEventListener('click', handleClick)
 
 function handleClick(e) {
-  button.textContent = "Generating doggo..."
+  // button.span.style.display = "block" 
   $.get('https://dog.ceo/api/breeds/image/random')
     .then((data) => {
     $("#myImage").attr('src', data.message)
-    const imageDiv = document.querySelector('#images') 
+    const imageDiv = document.querySelector('#images')
+    imageDiv.innerHTML = ""; 
     doggoImage = document.createElement('img');
     doggoImage.setAttribute('src', data.message)
     doggoImage.setAttribute('src', data.message)
     doggoImage.style.width = "60%";
     imageDiv.appendChild(doggoImage)
-    button.textContent = "Generate doggo"
+    // button.textContent = "Generate doggo"
   });
 }
 
@@ -49,3 +50,11 @@ function handleChange(e) {
     // button.textContent = "Generate doggo"
   });
 }
+
+$(document).ready( function()
+{
+  $('#spinner').on('click', function()
+  {
+    $('body').addClass('busy');
+  });
+}); 

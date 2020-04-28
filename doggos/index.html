@@ -8,11 +8,14 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container mt-3 rounded">
+  <div class="container mt-3 rounded min-vh-100">
     <div class="justify-content-center p-3">
       <h1>Doggos!</h1>
       <div class="randomButton mt-5 mb-5">
-        <button id="dog-random" class="btn btn-dark">Generate Random Doggo</button>
+        <button id="dog-random" class="btn btn-dark" type="button">Generate Random Doggo
+          <span class="spinner-border spinner-border-sm" role="status" id="spinner" aria-hidden="true"></span>
+          <span class="sr-only">Loading...</span>
+        </button>
       </div>
       <div class="selectButton mt-5 mb-5">
         <select id="dog-select">
