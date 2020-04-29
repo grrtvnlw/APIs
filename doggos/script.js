@@ -11,7 +11,7 @@ function handleClick(e) {
     doggoImage = document.createElement('img');
     doggoImage.setAttribute('src', data.message)
     doggoImage.setAttribute('src', data.message)
-    doggoImage.style.width = "60%";
+    doggoImage.style.width = "100%";
     imageDiv.appendChild(doggoImage)
     // button.textContent = "Generate doggo"
   });
